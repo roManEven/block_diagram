@@ -89,14 +89,17 @@ API-ключ xAI для интеграции с Grok
 
 digraph G {
     dpi=300;
-    Start [shape=oval];
-    Task [shape=box];
-    Decision [shape=diamond];
-    End [shape=oval];
-    Start -> Task -> Decision -> End;
+
+    начало [shape=ellipse, label="начало"];
+    процес [shape=box, label="процес"];
+    конец [shape=ellipse, label="конец"];
+
+    начало -> процес;
+    процес -> конец;
 }
 
 Диаграмма отобразится на холсте.
+![1](https://github.com/user-attachments/assets/7091971a-b9d6-4d7b-a2a6-cea650b6b1d8)
 
 Как внести вклад
 Приветствуются любые улучшения и предложения.
