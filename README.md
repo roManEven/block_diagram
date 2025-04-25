@@ -65,7 +65,6 @@ data = pd.read_excel(file_path).head(50)  # Ограничиваем 50 стро
 **Требования**
 
 Python 3.10+
-
 Библиотеки, указанные в requirements.txt:
 tk==0.1.0 
 graphviz==0.20.3
@@ -87,11 +86,9 @@ API-ключ xAI для интеграции с Grok
 
 digraph G {
     dpi=300;
-
     начало [shape=ellipse, label="начало"];
     процес [shape=box, label="процес"];
     конец [shape=ellipse, label="конец"];
-
     начало -> процес;
     процес -> конец;
 }
