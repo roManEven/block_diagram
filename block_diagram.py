@@ -9,7 +9,7 @@ import pandas as pd
 import threading
 import os
 
-# Настройки API для Grok
+# Настройки API Grok
 XAI_API_KEY = "Your KEY"
 client = OpenAI(api_key=XAI_API_KEY, base_url="https://api.x.ai/v1")
 
@@ -644,4 +644,5 @@ class BlockDiagramAssistant:
 if __name__ == "__main__":
     root = tk.Tk()
     app = BlockDiagramAssistant(root)
+
     root.mainloop()
