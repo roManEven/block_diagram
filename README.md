@@ -1,5 +1,109 @@
 https://youtu.be/0I4l7JE23-g
 
+Block Diagram Assistant
+Block Diagram Assistant is a Python-based application designed for generating and editing flowcharts using Graphviz, Tkinter, and the xAI Grok API. The program allows users to create diagrams from natural language descriptions, edit DOT code, import data from Excel or text files, and export the final diagrams in multiple formats (PNG, JPEG, PDF).
+
+Key Features
+AI Diagram Generation: Create complex flowcharts from simple natural language descriptions using the Grok API.
+
+AI-Powered Editing: Enhance and fix existing DOT code with AI assistance.
+
+Data Integration: Load Excel files (.xlsx, .xls) or text files (.dot, .txt) to build diagrams based on external data.
+
+Interactive Interface: A user-friendly Tkinter UI with support for zooming, panning, and direct canvas interaction.
+
+DOT Code Editor: Built-in editor for manual Graphviz code adjustments with syntax verification.
+
+Context Menus: Convenient right-click shortcuts for copying, pasting, and saving content.
+
+Installation & Setup
+Install Dependencies:
+
+Bash
+pip install -r requirements.txt
+Install Graphviz:
+
+Download and install Graphviz from the official website.
+
+Crucial: Ensure Graphviz is added to your system's PATH environment variable.
+
+API Configuration:
+
+Obtain an API key from xAI Console.
+
+Replace "Your KEY" in the script with your actual API key.
+
+How to Use
+1. Launch the Application
+Bash
+python block_diagram_assistant.py
+2. Generating a Flowchart
+Select "Generation Mode".
+
+Enter a description in the text field (e.g., "A two-step process connected by an arrow").
+
+(Optional) Upload an Excel or text file. Note: The default data processing is limited to the first 50 rows.
+
+Click "Generate/Fix Diagram" or press Enter.
+
+Review the generated DOT code and the rendered diagram on the canvas.
+
+3. Editing a Flowchart
+Select "Edit Mode".
+
+Paste or manually edit the DOT code in the code editor.
+
+(Optional) Provide additional instructions in the description field for the AI to refine the code.
+
+Click "Generate/Fix Diagram" to apply AI improvements or manual changes.
+
+4. Saving Your Work
+Canvas: Right-click the diagram to save it as PNG, JPEG, or PDF.
+
+Code Editor: Right-click to save the source code as a .dot or .txt file.
+
+Requirements
+Python: 3.10 or higher
+
+Core Libraries (see requirements.txt):
+
+tk==0.1.0
+
+graphviz==0.20.3
+
+openai==1.74.0
+
+pillow==11.1.0
+
+pandas==2.2.3
+
+System: Graphviz installed and added to PATH.
+
+Access: Active xAI API Key.
+
+Example
+To create a simple process:
+
+Enter: "start-process-end" in the description.
+
+Click "Generate/Fix Diagram".
+
+The program generates the following DOT code and renders it immediately:
+
+Фрагмент кода
+digraph G {
+    dpi=300;
+    start [shape=ellipse, label="Start"];
+    process [shape=box, label="Process"];
+    end [shape=ellipse, label="End"];
+    
+    start -> process;
+    process -> end;
+}
+Would you like me to help you format this into a professional README.md file for GitHub, including icons and better styling?
+
+
+
 "**Помощник по созданию блок-схем**"
 
 Python-приложение для генерации и редактирования блок-схем с использованием Graphviz, Tkinter и API Grok от xAI. Программа позволяет создавать диаграммы на основе текстовых описаний, редактировать DOT-код, загружать файлы Excel или текстовые файлы для создания диаграмм на основе данных, а также сохранять диаграммы в различных форматах (PNG, JPEG, PDF).
